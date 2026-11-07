@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">SaborExpress</string>
+    <string name="slogan_splash">Reservas y Sabores a tu Medida</string>
+
+    <!-- Login -->
+    <string name="login_title">SaborExpress</string>
+    <string name="login_subtitle">Bienvenido de nuevo</string>
+    <string name="email_label">Correo electrónico</string>
+    <string name="email_hint">ejemplo@correo.com</string>
+    <string name="password_label">Contraseña</string>
+    <string name="password_hint">••••••••</string>
+    <string name="forgot_password">¿Olvidaste tu contraseña?</string>
+    <string name="btn_login_menu">Ingresar al Menú</string>
+    <string name="quick_biometric_title">ACCESO RÁPIDO SEGURO</string>
+    <string name="quick_biometric_subtitle">Toca el sensor de huella para ingresar</string>
+    <string name="login_with_google">Continuar con Google</string>
+    <string name="btn_create_account">Crear cuenta nueva</string>
+
+    <!-- Recovery -->
+    <string name="recovery_title">Recuperar Contraseña</string>
+    <string name="recovery_description">Ingresa el correo electrónico asociado a tu cuenta de SaborExpress y te enviaremos un enlace seguro para restablecerla.</string>
+    <string name="btn_send_recovery">Recuperar contraseña</string>
+    <string name="back_to_login">Volver al inicio de sesión</string>
+
+    <!-- Biometric strings -->
+    <string name="biometric_prompt_title">Autenticación Biométrica</string>
+    <string name="biometric_prompt_subtitle">Inicia sesión en SaborExpress</string>
+    <string name="biometric_prompt_desc">Coloca tu huella dactilar sobre el sensor para ingresar rápidamente a tu cuenta.</string>
+    <string name="biometric_cancel">Cancelar</string>
+
+    <!-- Accessibility descriptions -->
+    <string name="desc_app_logo">Logo oficial de SaborExpress</string>
+    <string name="desc_biometric_fingerprint">Sensor de acceso por huella dactilar</string>
+    <string name="desc_google_icon">Ícono de Google</string>
+    <string name="desc_back_button">Regresar a la pantalla anterior</string>
+    <string name="desc_email_icon">Ícono de correo</string>
+</resources>
+

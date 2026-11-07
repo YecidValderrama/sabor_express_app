@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginBottom="8dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="3dp"
+    app:cardBackgroundColor="@color/surface_white"
+    app:strokeColor="@color/border_light"
+    app:strokeWidth="1dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="14dp">
+
+        <!-- Imagen del plato con esquinas redondeadas -->
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivDishImage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="#F0EDE8"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_restaurant_logo"
+            android:padding="20dp"
+            android:contentDescription="Fotografía del plato gastronómico"
+            app:shapeAppearanceOverlay="@style/ShapeAppearance.SaborExpress.Medium"
+            app:tint="@color/terracota_primary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <!-- Título del plato -->
+        <TextView
+            android:id="@+id/tvDishTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:text="Lomo al Trapo Tradicional"
+            android:textColor="@color/text_primary"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ivDishImage"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Descripción del plato -->
+        <TextView
+            android:id="@+id/tvDishDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="4dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="Corte de lomo fino envuelto en lienzo con sal marina y hierbas de campo."
+            android:textColor="@color/text_secondary"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ivDishImage"
+            app:layout_constraintTop_toBottomOf="@+id/tvDishTitle" />
+
+        <!-- Precio -->
+        <TextView
+            android:id="@+id/tvDishPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="10dp"
+            android:text="$ 48.500 COP"
+            android:textColor="@color/terracota_primary"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ivDishImage"
+            app:layout_constraintTop_toBottomOf="@+id/tvDishDescription" />
+
+        <!-- Botón "+ Añadir a la preorden" -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAddDish"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:backgroundTint="@color/terracota_primary"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:text="+ Añadir a la preorden"
+            android:textColor="@color/text_white"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            app:cornerRadius="10dp"
+            app:elevation="2dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvDishPrice"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvDishPrice" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>
+

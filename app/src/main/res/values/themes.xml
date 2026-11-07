@@ -1,0 +1,41 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.SaborExpress" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Colores Primarios Terracota (#A33900) -->
+        <item name="colorPrimary">@color/terracota_primary</item>
+        <item name="colorPrimaryVariant">@color/terracota_primary_dark</item>
+        <item name="colorOnPrimary">@color/surface_white</item>
+
+        <!-- Colores Secundarios -->
+        <item name="colorSecondary">@color/terracota_secondary</item>
+        <item name="colorOnSecondary">@color/surface_white</item>
+
+        <!-- Fondos y Superficies claras -->
+        <item name="android:colorBackground">@color/background_light</item>
+        <item name="colorSurface">@color/surface_white</item>
+        <item name="colorOnSurface">@color/text_primary</item>
+
+        <!-- Barra de estado -->
+        <item name="android:statusBarColor">@color/background_light</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+
+        <!-- Bordes redondeados en componentes Material -->
+        <item name="shapeAppearanceCornerSmall">@style/ShapeAppearance.SaborExpress.Small</item>
+        <item name="shapeAppearanceCornerMedium">@style/ShapeAppearance.SaborExpress.Medium</item>
+        <item name="shapeAppearanceCornerLarge">@style/ShapeAppearance.SaborExpress.Large</item>
+    </style>
+
+    <!-- Estilos de esquinas redondeadas -->
+    <style name="ShapeAppearance.SaborExpress.Small" parent="ShapeAppearance.Material3.Corner.Small">
+        <item name="cornerSize">12dp</item>
+    </style>
+
+    <style name="ShapeAppearance.SaborExpress.Medium" parent="ShapeAppearance.Material3.Corner.Medium">
+        <item name="cornerSize">16dp</item>
+    </style>
+
+    <style name="ShapeAppearance.SaborExpress.Large" parent="ShapeAppearance.Material3.Corner.Large">
+        <item name="cornerSize">24dp</item>
+    </style>
+</resources>
+

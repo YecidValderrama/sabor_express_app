@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="6dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginBottom="6dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="2dp"
+    app:cardBackgroundColor="@color/surface_white"
+    app:strokeColor="@color/border_light"
+    app:strokeWidth="1dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp">
+
+        <!-- Imagen del plato -->
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivCartDishImage"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:background="#F0EDE8"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_restaurant_logo"
+            android:padding="16dp"
+            android:contentDescription="Imagen del plato en la preorden"
+            app:shapeAppearanceOverlay="@style/ShapeAppearance.SaborExpress.Medium"
+            app:tint="@color/terracota_primary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Título del plato -->
+        <TextView
+            android:id="@+id/tvCartDishTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="8dp"
+            android:text="Lomo al Trapo Tradicional"
+            android:textColor="@color/text_primary"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/layoutQuantity"
+            app:layout_constraintStart_toEndOf="@+id/ivCartDishImage"
+            app:layout_constraintTop_toTopOf="@+id/ivCartDishImage" />
+
+        <!-- Precio unitario / subtotal -->
+        <TextView
+            android:id="@+id/tvCartDishPrice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="8dp"
+            android:text="$ 48.500 COP"
+            android:textColor="@color/terracota_primary"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/layoutQuantity"
+            app:layout_constraintStart_toEndOf="@+id/ivCartDishImage"
+            app:layout_constraintTop_toBottomOf="@+id/tvCartDishTitle" />
+
+        <!-- Controles de cantidad "+" y "-" -->
+        <LinearLayout
+            android:id="@+id/layoutQuantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_biometric_button"
+            android:paddingStart="4dp"
+            android:paddingEnd="4dp"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            app:layout_constraintBottom_toBottomOf="@+id/ivCartDishImage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/ivCartDishImage">
+
+            <ImageButton
+                android:id="@+id/btnDecreaseQty"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Disminuir cantidad"
+                android:src="@drawable/ic_remove"
+                app:tint="@color/terracota_primary" />
+
+            <TextView
+                android:id="@+id/tvCartDishQuantity"
+                android:layout_width="28dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="1"
+                android:textColor="@color/text_primary"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/btnIncreaseQty"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Aumentar cantidad"
+                android:src="@drawable/ic_add"
+                app:tint="@color/terracota_primary" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>
+

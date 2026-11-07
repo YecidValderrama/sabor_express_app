@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="6dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginBottom="6dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="2dp"
+    app:cardBackgroundColor="@color/surface_white"
+    app:strokeColor="@color/border_light"
+    app:strokeWidth="1dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="14dp">
+
+        <!-- Avatar con iniciales -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardUserAvatar"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="@color/biometric_ring"
+            app:strokeWidth="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_person"
+                android:contentDescription="Avatar de usuario"
+                app:tint="@color/terracota_primary" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Nombre de usuario -->
+        <TextView
+            android:id="@+id/tvAdminUserName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="8dp"
+            android:text="Marlon Yecid Valderrama"
+            android:textColor="@color/text_primary"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/chipUserRole"
+            app:layout_constraintStart_toEndOf="@+id/cardUserAvatar"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Badge de Rol / Estado -->
+        <TextView
+            android:id="@+id/chipUserRole"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_biometric_button"
+            android:paddingStart="8dp"
+            android:paddingTop="2dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="2dp"
+            android:text="VIP"
+            android:textColor="@color/terracota_primary"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Correo Electrónico -->
+        <TextView
+            android:id="@+id/tvAdminUserEmail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="2dp"
+            android:text="marlon.valderrama@correo.com"
+            android:textColor="@color/text_secondary"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/cardUserAvatar"
+            app:layout_constraintTop_toBottomOf="@+id/tvAdminUserName" />
+
+        <!-- Cédula / Documento -->
+        <TextView
+            android:id="@+id/tvAdminUserDoc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="2dp"
+            android:text="C.C. 1.023.456.789"
+            android:textColor="@color/text_secondary"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/cardUserAvatar"
+            app:layout_constraintTop_toBottomOf="@+id/tvAdminUserEmail" />
+
+        <!-- Última Reserva -->
+        <TextView
+            android:id="@+id/tvAdminUserLastBooking"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="2dp"
+            android:text="Última reserva: Ayer, 8:00 PM (Sede Parque 93)"
+            android:textColor="@color/terracota_secondary"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/cardUserAvatar"
+            app:layout_constraintTop_toBottomOf="@+id/tvAdminUserDoc" />
+
+        <!-- Divisor sutil -->
+        <View
+            android:id="@+id/dividerActions"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="12dp"
+            android:background="@color/divider"
+            app:layout_constraintTop_toBottomOf="@+id/tvAdminUserLastBooking" />
+
+        <!-- 3 Botones de Acción (Editar, Suspender, Eliminar) -->
+        <LinearLayout
+            android:id="@+id/layoutUserActions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="end"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dividerActions">
+
+            <!-- Botón Editar -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnEditUser"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                android:text="Editar"
+                android:textColor="@color/terracota_primary"
+                android:textSize="12sp"
+                app:icon="@drawable/ic_edit"
+                app:iconPadding="4dp"
+                app:iconSize="16dp"
+                app:iconTint="@color/terracota_primary" />
+
+            <!-- Botón Suspender -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSuspendUser"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                android:layout_marginStart="4dp"
+                android:text="Suspender"
+                android:textColor="#F57C00"
+                android:textSize="12sp"
+                app:icon="@drawable/ic_suspend_user"
+                app:iconPadding="4dp"
+                app:iconSize="16dp"
+                app:iconTint="#F57C00" />
+
+            <!-- Botón Eliminar -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnDeleteUser"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                android:layout_marginStart="4dp"
+                android:text="Eliminar"
+                android:textColor="#D32F2F"
+                android:textSize="12sp"
+                app:icon="@drawable/ic_delete"
+                app:iconPadding="4dp"
+                app:iconSize="16dp"
+                app:iconTint="#D32F2F" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>
+
